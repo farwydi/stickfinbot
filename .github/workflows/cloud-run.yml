@@ -21,8 +21,8 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.RUN_PROJECT }}
-  RUN_REGION: us-central1
-  SERVICE_NAME: helloworld-nodejs
+  RUN_REGION: europe-west3
+  SERVICE_NAME: stickfinbot
 
 jobs:
   setup-build-deploy:
