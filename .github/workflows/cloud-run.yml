@@ -21,7 +21,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.RUN_PROJECT }}
-  RUN_REGION: europe-west3
+  RUN_REGION: europe-west1
   SERVICE_NAME: stickfinbot
 
 jobs:
