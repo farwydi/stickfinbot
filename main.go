@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"log"
 	"os"
 	"os/signal"
@@ -8,7 +9,8 @@ import (
 )
 
 func main() {
-	endpoint, cleanup, err := bootstrap()
+	ctx := context.Background()
+	endpoint, cleanup, err := bootstrap(ctx)
 	if err != nil {
 		log.Fatalf("Fail bootstrap app: %v", err)
 	}
