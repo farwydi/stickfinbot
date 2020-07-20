@@ -4,10 +4,11 @@ import (
 	"context"
 	"github.com/farwydi/stickfinbot/pkg/domain"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
+	"os"
 )
 
-func NewTelegramGateway(token domain.TelegramBotToken) (domain.TelegramGateway, error) {
-	bot, err := tgbotapi.NewBotAPI(string(token))
+func NewTelegramGateway() (domain.TelegramGateway, error) {
+	bot, err := tgbotapi.NewBotAPI(os.Getenv("BOT_TOKEN"))
 	if err != nil {
 		return nil, err
 	}

@@ -10,7 +10,7 @@ import (
 	"github.com/google/wire"
 )
 
-func bootstrap(token domain.TelegramBotToken) (domain.Endpoint, func(), error) {
+func bootstrap() (domain.Endpoint, func(), error) {
 	panic(wire.Build(
 		telegramgateway.NewTelegramGateway,
 		general.NewGeneralUseCase,

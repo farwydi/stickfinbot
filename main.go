@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/farwydi/stickfinbot/pkg/domain"
 	"log"
 	"os"
 	"os/signal"
@@ -9,7 +8,7 @@ import (
 )
 
 func main() {
-	endpoint, cleanup, err := bootstrap(domain.TelegramBotToken(os.Getenv("BOT_TOKEN")))
+	endpoint, cleanup, err := bootstrap()
 	if err != nil {
 		log.Fatalf("Fail bootstrap app: %v", err)
 	}

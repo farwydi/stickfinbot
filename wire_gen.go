@@ -14,8 +14,8 @@ import (
 
 // Injectors from bootstrap.go:
 
-func bootstrap(token domain.TelegramBotToken) (domain.Endpoint, func(), error) {
-	telegramGateway, err := telegram.NewTelegramGateway(token)
+func bootstrap() (domain.Endpoint, func(), error) {
+	telegramGateway, err := telegram.NewTelegramGateway()
 	if err != nil {
 		return nil, nil, err
 	}
